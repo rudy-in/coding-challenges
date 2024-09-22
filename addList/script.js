@@ -20,11 +20,6 @@ add(7,-12) //=> -5
 */
 
 // Your solution for 02-addList here:
-
-function addList(args) {
-    let sum = 0;
-    for (let i = 0; i < arguments.length; i ++) {
-      sum += arguments[i];
-    }
-    return args.reduce((sum ,num) => sum + num, 0);
-  }
+function addList(...args) {
+    return args.reduce((sum, num) => sum + num, 0);
+}
