@@ -23,18 +23,14 @@ charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i:
 
 // Your solution for charCount here:
 
-function charCount(str1) {
-    let countObj = {};
-    for (let i = 0; i < str1.length; i++) {
-      if(countObj) {
-        if (countObj.hasOwnProperty(str1[i])) {
-          countObj[str1[i]] += 1;
+function charCount(str) {
+    let result = {};
+    for (let char of str) {
+        if (result[char]) {
+            result[char]++;
         } else {
-          countObj[str1[i]] = 1;
+            result[char] = 1;
         }
-      } else {
-        countObj[str1[i]] = 1;
-      }
     }
-    return countObj;
-  }
+    return result;
+}
