@@ -23,3 +23,8 @@ add(7,-12) //=> -5
 function addList(...args) {
     return args.reduce((sum, num) => sum + num, 0);
 }
+
+console.log(addList(1));           // output: 1
+console.log(addList(1, 50, 1.23)); // output: 52.23
+console.log(addList(7, -12));      // output: -5
+console.log(addList());            // output: 0
